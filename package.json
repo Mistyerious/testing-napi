@@ -1,0 +1,34 @@
+{
+  "name": "testing-napi",
+  "version": "0.0.0",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "napi": {
+    "name": "testing-napi",
+    "package": {
+      "name": "@mistyerious/testing-napi"
+    }
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@napi-rs/cli": "^2.10.0",
+    "ava": "^4.3.0"
+  },
+  "engines": {
+    "node": ">= 10"
+  },
+  "scripts": {
+    "artifacts": "napi artifacts",
+    "build": "napi build --platform --release",
+    "build:debug": "napi build --platform",
+    "prepublishOnly": "napi prepublish -t npm",
+    "test": "ava",
+    "version": "napi version"
+  },
+  "packageManager": "yarn@3.2.1",
+  "optionalDependencies": {
+    "testing-win32-x64-msvc": "0.0.0",
+    "testing-darwin-x64": "0.0.0",
+    "testing-linux-x64-gnu": "0.0.0"
+  }
+}
